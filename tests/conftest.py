@@ -83,6 +83,7 @@ def sites(db_session, client):
             dno=json.dumps({"dno_id": str(i), "name": "unknown", "long_name": "unknown"}),
             gsp=json.dumps({"gsp_id": str(i), "name": "unknown"}),
             client_uuid=client.client_uuid,
+            owner="test_owner",
         )
         db_session.add(site)
         db_session.commit()
@@ -115,6 +116,7 @@ def make_sites_for_country(db_session):
                 dno=json.dumps({"dno_id": str(i), "name": "unknown", "long_name": "unknown"}),
                 gsp=json.dumps({"gsp_id": str(i), "name": "unknown"}),
                 country=country,
+                owner="test_owner",
             )
             db_session.add(site)
             db_session.commit()
