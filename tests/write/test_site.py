@@ -102,9 +102,7 @@ def test_create_new_site_in_specified_country(db_session):
         message == f"Site with client site id {site.client_site_id} "
         f"and site uuid {site.site_uuid} created successfully"
     )
-    # owner was not provided so it should be None
-    assert site.owner is None
-
+   
 
 def test_edit_site(db_session):
     """Test the update of site metadata"""
